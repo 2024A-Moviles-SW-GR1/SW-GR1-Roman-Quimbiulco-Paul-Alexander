@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "544912023746",
+    "project_id": "parq-swgr1-2024a",
+    "storage_bucket": "parq-swgr1-2024a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544912023746:android:427cda9a10be972cfddb5b",
+        "android_client_info": {
+          "package_name": "com.example.a2024swgr1parq"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAckhmz6Al_VRyJIWZcgn2eAVWVE2DYM18"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
