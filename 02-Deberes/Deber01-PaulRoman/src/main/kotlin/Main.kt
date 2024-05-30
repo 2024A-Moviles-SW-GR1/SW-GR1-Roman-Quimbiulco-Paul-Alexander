@@ -160,6 +160,8 @@ fun main() {
                     val codigoUnicoInput = reader.nextInt()
                     val removed = materias[indexmateriaDelEstudiante].estudiantes.removeIf { it.codigoUnico == codigoUnicoInput }
                     if(removed) println("Material Eliminada") else println("Material No se pudo eliminar ")
+                    relaciones.removeIf{ relacion -> relacion.codigoUnico == codigoUnicoInput && relacion.codigoMateria == materia.codigo}
+
                 }?: println("Materia no encontrada.")
             }
             7-> printMaterias(materias)
@@ -199,51 +201,3 @@ fun printMateriasSinEstudiantes(materias : List<Materia>){
         println(materia.toStringSinEstudiantes())
     }
 }
-
-
-
-
-
-    /*
-    val estudiantes = estudianteService.cargarDesdeCSV()
-
-    val brother = Estudiante(
-        "Ana Campoverde",
-         Utils.parseDate("12-12-202"),
-        "Mecanica",
-        201820773,
-        36.87 )
-
-    val brother2 = Estudiante(
-        "Pedro Sanchez",
-        Utils.parseDate("12-12-202"),
-        "Mecanica",
-        201820773,
-        36.87 )
-
-    estudiantes.forEach{estudiante -> println(estudiante.toString())}
-    val listStudents = arrayListOf(brother, brother2)
-    estudianteService.guardaEstudiantesEnCSV(listStudents)
-
-
-    val materiaAIngresar = Materia("Auditoria Informática", "ISW225",  true, 28148721);
-
-    val listaMaterias = arrayListOf(materiaAIngresar)
-    materiaService.guardarMateriasEnCSV(listaMaterias)
-
-    val materiasRecibidas = materiaService.cargarDesdeCSV()
-    materiasRecibidas.forEach{
-        materia -> println(materia.toString())
-    }
-
-    val relacionAIngresar = EstudianteMateria(201820773, "ISW225");
-
-    val listaMaterias = arrayListOf(relacionAIngresar)
-    relacionService.guardaEstudianteMateriaEnCSV(listaMaterias)
-
-    val materiasRecibidas = relacionService.cargarDesdeCSV()
-    materiasRecibidas.forEach{
-            materia -> println(materia.codigoMateria + "CU"+ materia.codigoUnico)
-    }
-    */
-
