@@ -67,10 +67,26 @@ fun main(){
     val arregloEstatico:Array<Int> = arrayOf(1,2,3);
     println(arregloEstatico)
 
-    val arregloDinamico: ArrayList<Int> = arrayListOf(1,2,3,4)
+    val arregloDinamico: ArrayList<Int> = arrayListOf(1,2,3,4,5,6,7,8,9,10,11,12)
     arregloDinamico.add(5)
     arregloDinamico.add(10)
     println(arregloDinamico)
+
+    val respuestaReduce : Int = arregloDinamico
+        .reduce{ accumulator:Int, valorActual: Int ->
+        return@reduce(accumulator + valorActual)
+    }
+
+    println("Respuesta reduce Function $respuestaReduce")
+
+    val respuestaForEach : Unit = arregloDinamico
+        .forEach{
+            valorActual: Int ->
+            println("Valor actual:  ${valorActual}")
+        }
+
+    arregloDinamico.forEach{println("Valor actual (it):  ${it}")}
+
 }// Termina funcion Main
 
 // void -> Unit
