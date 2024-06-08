@@ -7,6 +7,6 @@ CADA ESTUDIANTE ESTARA ASOCIADO A UNA MATERIA
 - EL REGISTRO DE ESTUDIANTES SE GUARDARÁ EN EL ARCHIVO ESTUDIANTES.CSV
 - EL REGISTRO DE RELACIONES ENTRE ESTUDIANTES Y MATERIAS SE GUARDARÁ EN EL ARCHIVO ESTUDIANTEMATERIA.CSV
 
-VIDEO : En este repositorio se encuentra el fichero VIDEO EXPLICACION presente en este repositorio
+VIDEO : [En este repositorio se encuentra el fichero VIDEO EXPLICACION presente en este repositorio](https://epnecuador-my.sharepoint.com/:v:/g/personal/paul_roman_epn_edu_ec/EcD3Fnoy4HhDrlK2OXVd9ygBJr9s3b_nDOgUkWEgIH2vIw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=CWKhbJ)
 
 
