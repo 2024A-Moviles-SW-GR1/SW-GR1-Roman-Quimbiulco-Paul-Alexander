@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_card_view_materia_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="0dp"
+    android:layout_marginVertical="1dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/id_constraint_layout_place"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@color/background">
+
+        <ImageView
+            android:id="@+id/myImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/clock"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_item_place_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="Aeropuerto 2"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/myImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_item_place_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quito"
+            android:textColor="@color/text_over_black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_item_place_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_place_name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
+
