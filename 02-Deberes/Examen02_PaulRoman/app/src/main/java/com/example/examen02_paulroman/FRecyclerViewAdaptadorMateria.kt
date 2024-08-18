@@ -1,4 +1,4 @@
-package com.example.deber02_paulroman
+package com.example.examen02_paulroman
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import android.widget.PopupMenu
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.deber02_paulroman.Models.Materia
+import com.example.examen02_paulroman.Models.Materia
 
 class FRecyclerViewAdaptadorMateria(
     private val contexto: AMateriasLista,

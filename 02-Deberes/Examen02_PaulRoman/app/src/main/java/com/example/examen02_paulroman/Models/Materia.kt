@@ -1,4 +1,4 @@
-package com.example.deber02_paulroman.Models
+package com.example.examen02_paulroman.Models
 
 import android.os.Parcel
 import android.os.Parcelable

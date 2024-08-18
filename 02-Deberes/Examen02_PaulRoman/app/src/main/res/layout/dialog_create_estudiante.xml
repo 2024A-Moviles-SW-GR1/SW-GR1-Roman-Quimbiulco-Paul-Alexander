@@ -42,6 +42,26 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"/>
 
+    <!-- New EditText for Latitude with negative numbers allowed -->
+    <EditText
+        android:id="@+id/et_latitud_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Latitud"
+        android:inputType="numberSigned|numberDecimal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- New EditText for Longitude with negative numbers allowed -->
+    <EditText
+        android:id="@+id/et_longitud_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Longitud"
+        android:inputType="numberSigned|numberDecimal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
+
     <Button
         android:id="@+id/btn_add_estudiante"
         android:layout_width="wrap_content"

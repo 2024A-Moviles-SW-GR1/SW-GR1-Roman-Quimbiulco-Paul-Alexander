@@ -1,4 +1,4 @@
-package com.example.deber02_paulroman
+package com.example.examen02_paulroman
 
 import android.view.LayoutInflater
 import android.view.MenuInflater
@@ -9,7 +9,7 @@ import android.widget.PopupMenu
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.deber02_paulroman.Models.Estudiante
+import com.example.examen02_paulroman.Models.Estudiante
 
 class FRecyclerViewAdaptadorEstudiante(
     private val contexto: AEstudiantesLista,
@@ -66,6 +66,11 @@ class FRecyclerViewAdaptadorEstudiante(
                     notifyItemRemoved(position)
                     notifyItemRangeChanged(position, lista.size)
                     Toast.makeText(contexto, "Estudiante eliminado", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.action_address -> {
+                    val estudiante = lista[position]
+                    contexto.showEstudianteLocationDialog(estudiante)
                     true
                 }
                 else -> false

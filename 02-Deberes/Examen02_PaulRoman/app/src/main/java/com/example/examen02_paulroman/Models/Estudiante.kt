@@ -1,4 +1,4 @@
-package com.example.deber02_paulroman.Models
+package com.example.examen02_paulroman.Models
 
 import android.os.Parcel
 import android.os.Parcelable
@@ -9,7 +9,9 @@ class Estudiante(
     var fechaNacimiento: String?, // Assuming DATE is stored as a String
     var carrera: String?,
     var IRA: Double,
-    var idMateria: Int
+    var idMateria: Int,
+    var latitud: Double,    // Nueva propiedad: latitud
+    var longitud: Double    // Nueva propiedad: longitud
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
@@ -17,7 +19,9 @@ class Estudiante(
         parcel.readString(),
         parcel.readString(),
         parcel.readDouble(),
-        parcel.readInt()
+        parcel.readInt(),
+        parcel.readDouble(),
+        parcel.readDouble()
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -27,6 +31,8 @@ class Estudiante(
         parcel.writeString(carrera)
         parcel.writeDouble(IRA)
         parcel.writeInt(idMateria)
+        parcel.writeDouble(latitud)  // Escritura de latitud
+        parcel.writeDouble(longitud) // Escritura de longitud
     }
 
     override fun describeContents(): Int {
