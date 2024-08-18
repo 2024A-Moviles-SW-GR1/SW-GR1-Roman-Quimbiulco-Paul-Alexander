@@ -13,23 +13,23 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.deber02_paulroman.Models.Materia
+import com.example.proyecto_roman_campoverde.Models.Grupo
 
-class FRecyclerViewAdaptadorMateria(
+class FRecyclerViewAdaptadorGrupoMain(
     private val contexto: MainActivity,
-    private var lista: List<Materia>,
+    private var lista: List<Grupo>,
     private val recyclerView: RecyclerView
-) : RecyclerView.Adapter<FRecyclerViewAdaptadorMateria.MyViewHolder>() {
+) : RecyclerView.Adapter<FRecyclerViewAdaptadorGrupoMain.MyViewHolder>() {
 
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val nombreTextView: TextView = view.findViewById(R.id.tv_materia_name)
-        val codigoTextView: TextView = view.findViewById(R.id.tv_materia_codigo)
-        val cardView:CardView = view.findViewById(R.id.id_card_view_materia_item)
+        val nombreTextView: TextView = view.findViewById(R.id.tv_grupo_name)
+        val cardView:CardView = view.findViewById(R.id.id_card_view_grupo_item)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater
             .from(parent.context)
-            .inflate(R.layout.materia_item_layout, parent, false)
+            .inflate(R.layout.grupo_item_layout, parent, false)
         return MyViewHolder(itemView)
     }
 
@@ -38,26 +38,26 @@ class FRecyclerViewAdaptadorMateria(
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-            val materiaActual = lista[position]
-            holder.nombreTextView.text = materiaActual.nombre
-            holder.codigoTextView.text = materiaActual.codigo
+            val grupoActual = lista[position]
+            val materia: Materia? = contexto.dbHelper.obtenerMateriaPorId(grupoActual.idMateria)
 
+            holder.nombreTextView.text = materia?.nombre +" - " + grupoActual.nombre
             holder.cardView.setOnClickListener {
-                val intent = Intent(contexto, MateriaDetail::class.java)
-                intent.putExtra("materia", materiaActual)  // Pass the Materia object
+                val intent = Intent(contexto, GrupoDetail::class.java)
+                intent.putExtra("grupo", grupoActual)  // Pass the Materia object
                 contexto.startActivity(intent)
             }
         }
 
 
 
-    fun updateData(newLista: MutableList<Materia>) {
+    fun updateData(newLista: List<Grupo>) {
         lista = newLista
         notifyDataSetChanged()
     }
 
     fun setOnItemClickListener(any: Any) {
-        recyclerView.visibility = View.GONE
+
     }
 }
 

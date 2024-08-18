@@ -192,6 +192,25 @@ class ESqliteHelper(context: Context) : SQLiteOpenHelper(
         return grupos
     }
 
+    // Método para obtener una materia por su ID
+    fun obtenerMateriaPorId(id: Int): Materia? {
+        val db = this.readableDatabase
+        val cursor: Cursor = db.rawQuery("SELECT * FROM MATERIA WHERE id = ?", arrayOf(id.toString()))
+
+        return if (cursor.moveToFirst()) {
+            val materia = Materia(
+                id = cursor.getInt(cursor.getColumnIndexOrThrow("id")),
+                nombre = cursor.getString(cursor.getColumnIndexOrThrow("nombre")),
+                codigo = cursor.getString(cursor.getColumnIndexOrThrow("codigo"))
+            )
+            cursor.close()
+            materia
+        } else {
+            cursor.close()
+            null
+        }
+    }
+
 
     // Método para obtener todos los grupos de una materia por idMateria
     fun obtenerGruposPorIdMateria(idMateria: Int): List<Grupo> {

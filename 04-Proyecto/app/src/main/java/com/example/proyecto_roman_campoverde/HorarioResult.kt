@@ -19,7 +19,7 @@ class HorarioResult : AppCompatActivity() {
         }
         val actionBar: ActionBar? = supportActionBar
         if (actionBar != null) {
-            actionBar.setTitle("Tu Título") // Establece el título
+            actionBar.setTitle("Horario Generado") // Establece el título
             actionBar.setDisplayHomeAsUpEnabled(true) // Muestra la flecha de regreso
         }
     }

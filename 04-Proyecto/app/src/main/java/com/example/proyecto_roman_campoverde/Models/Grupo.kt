@@ -62,4 +62,5 @@ data class Grupo(
             return arrayOfNulls(size)
         }
     }
+
 }
